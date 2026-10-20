@@ -1,0 +1,9 @@
+*
+!.gitignore
+!pyproject.toml
+!src/
+!src/facevision/
+!src/facevision/*.py
+!src/facevision/assets/
+!src/facevision/assets/*.onnx
+!src/facevision/assets/*.npz

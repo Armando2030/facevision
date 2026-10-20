@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facevision"
+version = "2.1.0"
+description = "Reconocimiento facial implementado en NumPy: alineación, LBP, Eigenfaces, Fisherfaces"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    # cámara, archivos de imagen, ventanas y el detector YuNet (cv2.FaceDetectorYN)
+    "opencv-python>=4.8",
+]
+
+[project.scripts]
+facevision = "facevision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+facevision = ["assets/*.npz", "assets/*.onnx"]
